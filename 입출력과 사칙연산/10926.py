@@ -1,0 +1,2 @@
+junha=input()
+print(junha+"??!")
