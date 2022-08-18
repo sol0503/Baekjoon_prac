@@ -1,0 +1,7 @@
+chess=input().split()
+print(1-int(chess[0]))
+print(1-int(chess[1]))
+print(2-int(chess[2]))
+print(2-int(chess[3]))
+print(2-int(chess[4]))
+print(8-int(chess[5]))
