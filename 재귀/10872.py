@@ -1,8 +1,11 @@
 import sys
-a=int(sys.stdin.readline())
-b=1
-if a>=1:
-  for i in range(1,a+1):
-    b*=i
+def num(a):
+  if a==1 or a==0:
+    return 1
+  else:
+    return a*num(a-1)
 
-print(b)
+a=int(sys.stdin.readline())
+
+print(num(a))
+
