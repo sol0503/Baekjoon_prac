@@ -1,6 +1,6 @@
 arr=list(input().upper())
 arr_sort=sorted(arr)
-arr_set=list(set(arr_sort))
+arr_set=list(dict.fromkeys(arr_sort))
 b=[]
 count=1
 a=0
@@ -20,24 +20,20 @@ else:
       a+=1
       count=1
   b.insert(a,count)
-max=0
-m=0
-counting=0
+max=-1
 if len(arr_sort)==1:
   print(arr_set[0])
 else:
+  count=0
+  m=-1
   for i in range(0,len(b)):
-    if counting<b[i]:
-      max=i
-      counting=b[i]
-    if counting==b[i]:
-      m=counting
-  if m==counting:
+    if max<b[i]:
+      max=b[i]
+      count=0
+      m=i
+    elif max==b[i]:
+      count+=1
+  if count!=0:
     print("?")
   else:
-    print(arr_set[max])
-print(arr_sort)
-print(arr_set)
-print(b)
-
-고치기
+    print(arr_set[m])
