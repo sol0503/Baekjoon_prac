@@ -1,18 +1,19 @@
-import sys
 arr=[]
-for i in range(0,5):
-  a= int(sys.stdin.readline())
-  arr.append(a)
+for i in range(1,29):
+  a=int(input())
+  arr.insert(i,a)
+
 arr=sorted(arr)
 k=0
-n=0
-for i in range(1,8):
-  if arr[n]!=i:
-    print(arr[n])
+for i in range(1,31):
+  if i not in arr:
+    print(i)
     k+=1
-    if k==2:
-      break
-  else:
-    n+=1
+  if k==2:
+    break
+
+  
+
+
 
 
